@@ -56,7 +56,7 @@ const GeneralKnowledge: React.FC = () => {
   };
   const calculateScore = () => {
     let score = 0;
-    questions.forEach((question, index) => {
+    questions.forEach((_, index) => {
       if (selectedAnswers[index] === correctAnswers[index]) {
         score++;
       }

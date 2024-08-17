@@ -8,7 +8,7 @@ import "./App.css";
 
 function App() {
   const [showCategories, setShowCategories] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState<number | null>(null);
+  const [_, setSelectedCategory] = useState<number | null>(null);
 
   const handleStartClick = () => {
     setShowCategories(true);
@@ -25,7 +25,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <Router basename="/Quick-Quiz/">
       <div className="container">
         <Routes>
           <Route
@@ -39,7 +39,7 @@ function App() {
                   <h1>
                     Hi, Welcome to <span className="app-name">QuickQuiz</span>
                   </h1>
-                  <p className="">Your ultimate trivia challenge awaits!</p>
+                  <p className="mb-5">Your ultimate trivia challenge awaits!</p>
                   <Button variant="primary" onClick={handleStartClick}>
                     Get Started
                   </Button>
