@@ -1,0 +1,17 @@
+:root {
+  font-family: 'Mochiy Pop One', sans-serif;
+  line-height: 1.1;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: #220101;
+  background-color: #fffdfa;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
