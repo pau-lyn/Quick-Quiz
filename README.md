@@ -19,9 +19,9 @@ This project is currently a work in progress. Features and functionalities are n
 - Displaying questions and possible answers.
 - Handling answer selection and quiz submission.
 - Showing correct and user-selected answers upon quiz completion.
+- Additional question categories.
 
 ### To Do- Enhance styling for a better user experience.
 
-- Add additional question categories.
 - Improve error handling and edge cases.
 - Add unit tests and integration tests.

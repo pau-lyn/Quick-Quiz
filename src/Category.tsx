@@ -32,8 +32,9 @@ const CategoryList: React.FC<CategoryListProps> = ({
     const categoryId = categories[categoryName as keyof CategoriesType];
     console.log(`Selected Category: ${categoryName}, ID: ${categoryId}`);
     onSelectCategory(categoryId);
-    if (categoryId === 9) {
-      navigate("/general-knowledge");
+
+    if (categoryId !== null) {
+      navigate("/general-knowledge", { state: { categoryId } });
     }
   };
 

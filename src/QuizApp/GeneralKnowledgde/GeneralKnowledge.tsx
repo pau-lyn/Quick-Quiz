@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+
 import "./GenKnow.css";
 
 interface Question {
@@ -9,6 +10,10 @@ interface Question {
 }
 
 const GeneralKnowledge: React.FC = () => {
+  const location = useLocation();
+  const { categoryId } = location.state || {};
+  const [quizTitle, setQuizTitle] = useState("General Knowledge Quiz");
+
   const [questions, setQuestions] = useState<Question[]>([]);
   const [selectedAnswers, setSelectedAnswers] = useState<{
     [key: number]: string;
@@ -22,10 +27,47 @@ const GeneralKnowledge: React.FC = () => {
 
   useEffect(() => {
     const fetchQuestions = async () => {
+      let categoryUrl = "";
+
+      switch (categoryId) {
+        case 9:
+          categoryUrl = `https://opentdb.com/api.php?amount=10&category=9`;
+          setQuizTitle("General Knowledge Quiz");
+          break;
+        case 17:
+          categoryUrl = `https://opentdb.com/api.php?amount=10&category=17`;
+          setQuizTitle("Science & Nature");
+          break;
+        case 19:
+          categoryUrl = `https://opentdb.com/api.php?amount=10&category=19`;
+          setQuizTitle("Mathematics");
+          break;
+        case 21:
+          categoryUrl = `https://opentdb.com/api.php?amount=10&category=21`;
+          setQuizTitle("Sports");
+          break;
+        case 22:
+          categoryUrl = `https://opentdb.com/api.php?amount=10&category=22`;
+          setQuizTitle("Geography");
+          break;
+        case 23:
+          categoryUrl = `https://opentdb.com/api.php?amount=10&category=23`;
+          setQuizTitle("History");
+          break;
+        case 20:
+          categoryUrl = `https://opentdb.com/api.php?amount=10&category=20`;
+          setQuizTitle("Mythology");
+          break;
+        case 31:
+          categoryUrl = `https://opentdb.com/api.php?amount=10&category=31`;
+          setQuizTitle("Anime & Manga");
+          break;
+        default:
+          break;
+      }
+
       try {
-        const response = await fetch(
-          `https://opentdb.com/api.php?amount=10&category=9`
-        );
+        const response = await fetch(categoryUrl);
         const data = await response.json();
         if (Array.isArray(data.results)) {
           setQuestions(data.results);
@@ -82,7 +124,8 @@ const GeneralKnowledge: React.FC = () => {
 
   return (
     <div className="general">
-      <h1>General Knowledge Quiz</h1>
+      <h1>{quizTitle}</h1>
+
       {quizCompleted ? (
         <div>
           <h2>Quiz Results</h2>
@@ -167,6 +210,9 @@ const GeneralKnowledge: React.FC = () => {
                   </div>
                 </div>
               ))}
+              <button className="quit-btn" onClick={handleQuitQuiz}>
+                Quit
+              </button>
               <button
                 type="button"
                 onClick={handleSubmitQuiz}
