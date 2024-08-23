@@ -110,7 +110,7 @@ const GeneralKnowledge: React.FC = () => {
     setShowCorrectAnswers(true);
   };
   const handleQuitQuiz = () => {
-    navigate("/");
+    navigate("/", { replace: true });
     setSelectedAnswers({});
     setQuizCompleted(false);
   };

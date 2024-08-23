@@ -34,7 +34,7 @@ const CategoryList: React.FC<CategoryListProps> = ({
     onSelectCategory(categoryId);
 
     if (categoryId !== null) {
-      navigate("/general-knowledge", { state: { categoryId } });
+      navigate("/quiz-zone", { state: { categoryId } });
     }
   };
 

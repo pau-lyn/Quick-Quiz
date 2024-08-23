@@ -52,7 +52,7 @@ function App() {
               )
             }
           />
-          <Route path="/general-knowledge" element={<GeneralKnowledge />} />
+          <Route path="/quiz-zone" element={<GeneralKnowledge />} />
         </Routes>
       </div>
     </Router>
