@@ -123,16 +123,18 @@ const GeneralKnowledge: React.FC = () => {
   };
 
   return (
-    <div className="general">
-      <h1>{quizTitle}</h1>
+    <div className="general container py-5">
+      <h1 className="text-center">{quizTitle}</h1>
 
       {quizCompleted ? (
         <div>
-          <h2>Quiz Results</h2>
-          <p>
+          <h2 className="text-center">Quiz Results</h2>
+          <p className="text-center">
             Your Score: {calculateScore()} out of {questions.length}
           </p>
-          <button onClick={handleQuitQuiz}>Quit Quiz</button>
+          <button className="quit-quiz-btn" onClick={handleQuitQuiz}>
+            Quit Quiz
+          </button>
           {showCorrectAnswers && (
             <div className="correct-answers">
               {questions.map((question: Question, index: number) => (
@@ -210,19 +212,25 @@ const GeneralKnowledge: React.FC = () => {
                   </div>
                 </div>
               ))}
-              <button className="quit-btn" onClick={handleQuitQuiz}>
-                Quit
-              </button>
-              <button
-                type="button"
-                onClick={handleSubmitQuiz}
-                disabled={!areAllQuestionsAnswered()}
-              >
-                Submit Quiz
-              </button>
+              <div className="quiz-btn d-flex justify-content-center">
+                <button
+                  type="button"
+                  className="quit-btn"
+                  onClick={handleQuitQuiz}
+                >
+                  Quit
+                </button>
+                <button
+                  type="button"
+                  onClick={handleSubmitQuiz}
+                  disabled={!areAllQuestionsAnswered()}
+                >
+                  Submit Quiz
+                </button>
+              </div>
             </form>
           ) : (
-            <p>Loading questions...</p>
+            <p className="text-center">Loading questions...</p>
           )}
         </div>
       )}

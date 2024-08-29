@@ -1,4 +1,37 @@
-h2{
+
+.category-list{
+    padding-top: 70px;
+    padding-bottom: 2em;
+    
+}
+
+.category-list h2{
+    font-weight: 800;
+    margin: 1em 0;
+}
+.category-item {
+    width: 100%;
+    background-color: rgba(173, 103, 28, 0.1);
+    font-weight: 800;
+    padding: 1em;
+    text-align: center;
+    font-size: 28px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px #4c260143;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.category-item:hover {
+    background: linear-gradient(0deg, #af292b, #e4c17a); 
+    color: #fffdfa; 
+}
+@media (max-width: 768px) {
+    .category-list h2{
+        font-size: 24px;
+    }
+    .category-item{
+        font-size: 24px;
+    }}
+/*h2{
     margin: 2em 0
 }
   
@@ -21,5 +54,5 @@ h2{
     .category-item{
         font-size: 1.5em;
     }
-}
+}*/
 

@@ -23,5 +23,6 @@ This project is currently a work in progress. Features and functionalities are n
 
 ### To Do- Enhance styling for a better user experience.
 
-- Improve error handling and edge cases.
-- Add unit tests and integration tests.
+- Improve UI design.
+
+- https://pau-lyn.github.io/Quick-Quiz/

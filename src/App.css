@@ -1,9 +1,156 @@
 #root {
   margin: 0;
   padding: 0;
+  color: #4C2601;
+}
+
+.navbar {
+  z-index: 1000;
+  background-color: #FFFDFA;
+}
+
+.nav-link{
   text-align: center;
 }
 
+.App-logo {
+  width: 50px; 
+  margin: 0;
+}
+.app-name{
+  font-family: 'Pacifico' ;
+  color: #A35F1F;
+}
+.app-name.nav-part{
+  font-size: 16px;
+}
+.nav-link{
+  font-weight: 800 !important;
+  color: #A35F1F !important;
+}
+.landing{
+  background-color: #FFFDFA;
+}
+.welcome{
+  background-color: #F9F5EF;
+  padding-top: 70px;
+}
+.welcome h1{
+  font-weight: 800;
+  font-size: 48px;
+}
+.welcome p.tag-line, .features h1, #about h1{
+  font-weight: 800;
+  font-size: 28px;
+}
+.welcome p.text{
+font-size: 18px;
+margin: 3em 0;
+}
+.svg-img{
+  width: 75%;
+  margin: 1em 0;
+}
+.navbar-toggler{
+  padding: .5em 1em !important;
+}
+button{
+  font-size: 18px !important;
+  background: linear-gradient(0deg, #A35F1F, #e4c17a); 
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); 
+  color: #fffdfa;
+  font-weight: 600 !important;
+  border: none !important;
+  padding: .5em 4em !important;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+button:hover{
+  background: linear-gradient(0deg, #af292b, #e4c17a) !important; 
+  color: #fffdfa !important;
+  border: none;
+}
+
+.outer-border {
+  position: relative; 
+  margin: 4em 2em;
+} 
+
+.outer-border::after {
+  content: ''; 
+  position: absolute; 
+  top: -20px; 
+  left: -20px; 
+  border: 1px solid #FCDC9F; 
+  width: calc(100%);
+  height: calc(100%); 
+  box-sizing: border-box; 
+  border-radius: .8em;
+}
+
+.outer-border p {
+  position: relative; 
+  border: 1px solid #A35F1F;
+  padding: 2em 1em 3em 1em;
+  font-weight: 800;
+  font-size: 28px;
+  border-radius: .5em;
+}
+.how{
+  background-color: #F8EEE0;
+  text-align: center;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 10px;
+}
+.how:hover{
+  background-color: #A35F1F;
+  color: #F8EEE0;
+}
+
+#about{
+  margin: 3em 0;
+  text-align: center;
+  
+}
+
+#about p{
+  padding: 1em 5em;
+}
+
+.link{
+  padding: 1em;
+}
+
+@media (max-width: 768px) {
+  .welcome h1{
+    font-size: 42px;
+  }
+  .welcome p.tag-line, .features h1, #about h1{
+    font-size: 24px;
+  }
+  .welcome p.text{
+    font-size: 16px;
+    margin: 2em 0;
+    }
+    .outer-border {
+      position: relative; 
+      margin: 3em 1em 0 2em;
+    }
+  .outer-border p {
+
+    padding: 1.5em .5em 2em .5em;
+    font-size: 24px;
+  }
+  .svg-img{
+    margin: 2em 0;
+  }
+  #about p{
+    padding: 1em 0;
+  }
+
+}
+
+/*
 .welcome {
   display: flex;
   flex-direction: column;
@@ -12,7 +159,7 @@
   height: 100vh;
 }
 .App-logo{
-  width: 40%;
+  width: 10%;
 }
 .app-name{
   font-family: 'Pacifico' ;
@@ -59,4 +206,4 @@ button:hover {
   button{
     font-size: 16px;
   }
-}
+}*/

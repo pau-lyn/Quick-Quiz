@@ -39,11 +39,12 @@ const CategoryList: React.FC<CategoryListProps> = ({
   };
 
   return (
-    <div className="category-list">
-      <h2>Select a Category</h2>
+    <div className="category-list container">
+      <h2 className="text-center">Select a Category</h2>
       <Row className="d-flex justify-content-center">
         {Object.keys(categories).map((category, index) => (
           <Col
+            lg={6}
             className="mb-3 d-flex justify-content-center align-items-center mb-3"
             key={index}
           >
