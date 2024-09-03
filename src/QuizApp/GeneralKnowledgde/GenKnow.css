@@ -54,8 +54,8 @@
     strong, .cy-answers{
         font-size: 12px !important;
     }
-    .general .quit-btn{
-        padding: 1em 1.5em !important;
+    .general button{
+        padding: 1em 2em !important;
     }
-
+ 
 }

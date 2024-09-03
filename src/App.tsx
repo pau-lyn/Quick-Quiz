@@ -39,7 +39,7 @@ function App() {
     <div className="landing">
       <Navbar expand="lg" className="fixed-top">
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="#home" onClick={handleExitClick}>
             <img src={Logo} className="App-logo" alt="QuickQuiz logo" />
             <span className="app-name nav-part">QuickQuiz</span>
           </Navbar.Brand>
@@ -156,13 +156,15 @@ function App() {
                               <span>View your total score instantly.</span>
                             </div>
                           </div>
-                          <Button
-                            className="btn my-3"
-                            variant="primary"
-                            onClick={handleStartClick}
-                          >
-                            Start a quiz
-                          </Button>
+                          <div className="d-flex justify-content-center">
+                            <Button
+                              className="text-center btn my-3"
+                              variant="primary"
+                              onClick={handleStartClick}
+                            >
+                              Start a quiz
+                            </Button>
+                          </div>
                         </Col>
                       </Row>
                     </div>
